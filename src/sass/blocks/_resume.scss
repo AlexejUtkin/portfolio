@@ -1,0 +1,100 @@
+.resume {
+    margin-bottom: 120px;    
+    &__title {
+        position: relative;
+        margin-bottom: 6px;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    &__divider {
+        margin: 0 auto 60px auto;
+        width: 60px;
+        height: 3px;
+        background-color: $main-color;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 425px 425px;
+        column-gap: 136px;
+        padding-left:65px;
+    }
+    &__column   {
+        &-title {
+            position: relative;
+            padding-left: 42px;
+            margin-bottom: 45px;
+            @include before_circle;
+            &:before {
+                top: 50%;
+                left: -7px;
+                width: 15px;
+                height: 15px;
+                transform: translateY(-50%);
+        }
+        }
+        ul {            
+            list-style-type: none;            
+            position: relative;
+            &::after {
+                position: absolute;
+                top: -52px;
+                left: 0;
+                content: '';
+                width: 1px;
+                height: calc(100% + 46px);
+                background-color: #000000;
+                }
+            
+        }
+    }
+    &__item {
+        position: relative;
+        padding-left: 42px;
+        margin-bottom: 45px;
+        &::before {
+            position: absolute;
+            top: 17px;
+            left: 0;
+            content: '';
+            width: 42px;
+            height: 1px;
+            background-color: #000000;
+        }
+        &-icon {
+            padding: 14px 0 0 18px;
+            position: relative;
+            @include before_circle;
+            &:before {
+                top: 0;
+            }
+        }
+        &-head {
+            display: grid;
+            grid-template-columns: 20px 400px;
+            column-gap: 55px
+        }
+        &-location {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-title {
+            margin: 0;
+        }
+        &-body {
+            padding-top: 12px;
+        }
+    }
+
+
+}
